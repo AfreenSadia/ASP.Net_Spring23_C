@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div>
+        <div>
+            <a class="btn btn-success" href="/ProductsIndex/Home">Home</a>
+            <a class="btn btn-primary" href="/ProductsIndex/Products">Products</a>
+            <a class="btn btn-danger" href="/ProductsIndex/Login">Login</a>
+        </div>
+        @RenderBody()
+        <div>
+            Copyright @@ .NET[C] @DateTime.Now.Year
+        </div>
+    </div>
+</body>
+</html>

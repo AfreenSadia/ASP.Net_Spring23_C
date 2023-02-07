@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "MyProfile";
+    Layout = "~/Views/Shared/_LoggedView.cshtml";
+}
+
+<h2 class="text-center">Product List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (int i = 0; i < Model.Length; i++)
+        {
+            <tr>
+                <td>
+                    @Model[i].Id
+                </td>
+                <td>
+                    @Model[i].Name
+                </td>
+                <td>
+                    @Model[i].Price
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
