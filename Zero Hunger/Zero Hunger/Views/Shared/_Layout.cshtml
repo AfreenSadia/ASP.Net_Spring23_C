@@ -1,0 +1,126 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title  Zero Hunger</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="background-color:#b6f2ec">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" title="more options">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("ZERO HUNGER", "Homepage", "Zero", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Empolyee", "ViewEmployee", "Zero")</li>
+                    <li>@Html.ActionLink("Add Request", "AddRequest", "Zero")</li>
+                    <li>@Html.ActionLink("View Request", "ViewRequest", "Zero")</li>
+                    <li>@Html.ActionLink("View Collected Requests", "Collected", "Zero")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content position:absolute">
+        @RenderBody()
+        <hr />
+        <!-- Footer -->
+        <footer class="text-center text-lg-dark bbg-success text-muted">
+            <!-- Section: Social media -->
+            <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+            </section>
+            <!-- Section: Social media -->
+            <!-- Section: Links  -->
+            <section class="">
+                <div class="container text-center text-md-start mt-5">
+                    <!-- Grid row -->
+                    <div class="row mt-3">
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                            <!-- Content -->
+                            <h4 class="text-uppercase fw-bold mb-4 text-dark">
+                                <i class="fas fa-gem me-3"></i>Zero Hunger
+                            </h4>
+                            <p>
+                                We are an NGO who works for feeding deprived people and children. We have observed that, people are wasting a ton of food every day in Dhaka city (like office programs, buffets etc etc). We are on a mission to make the usage of this foods.
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                            <!-- Links -->
+                            <h4 class="text-uppercase fw-bold mb-4 text-dark">
+                                Future Work
+                            </h4>
+                            <p>
+                                <a href="#!" class="text-reset">Free Education</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Free Helth service</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Free Traning</a>
+                            </p>
+                            
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4 text-dark">
+                            <!-- Links -->
+                            <h4 class="text-uppercase fw-bold mb-4">
+                                Useful links
+                            </h4>
+                            <p>
+                                <a href="#!" class="text-reset">Donation</a>
+                            </p>
+                            <p>
+                                <a @Html.ActionLink("Send Message", "contact", "Zero")</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">FQA</a>
+                            </p>
+                            <p>
+                                <a href="#!" class="text-reset">Help</a>
+                            </p>
+                        </div>
+                        <!-- Grid column -->
+                        <!-- Grid column -->
+                        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                            <!-- Links -->
+                            <h4 class="text-uppercase fw-bold mb-4 text-dark">Contact</h4>
+                            <p><i class="fas fa-home me-3"></i> Dhaka, Kuratoli 1200, Bangladesh</p>
+                            <p>
+                                <i class="fas fa-envelope me-3"></i>
+                                zerohungerngo@gmail.com
+                            </p>
+                            <p><i class="fas fa-phone me-3"></i>01987654321</p>
+                            <p><i class="fas fa-print me-3"></i>01234567891</p>
+                        </div>
+                        <!-- Grid column -->
+                    </div>
+                    <!-- Grid row -->
+                </div>
+            </section>
+            <!-- Section: Links  -->
+            <!-- Copyright -->
+            <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+                © 2022 Copyright:
+                <a class="text-reset fw-bold" href="https://codeforces.com/">Zerohunger.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
